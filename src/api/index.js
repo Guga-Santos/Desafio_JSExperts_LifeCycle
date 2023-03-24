@@ -10,3 +10,5 @@ class API {
     return data;
   }
 }
+
+module.exports = API;

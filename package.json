@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx mocha -w */**/*.test.js",
+    "test:cov": "npx nyc npx mocha --timeout=5000 ./tests/**/*.test.js",
     "api": "npx json-server --watch data/fake-data-api.json --port 3001",
     "start": "node ."
   },
