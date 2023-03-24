@@ -1,4 +1,4 @@
-export default class Music {
+class Music {
   constructor({artist_name, album_name, music_name, duration }) {
       this.artist_name = artist_name;
       this.album_name = album_name;
@@ -6,3 +6,5 @@ export default class Music {
       this.duration = duration;
   }
 }
+
+module.exports = Music;
