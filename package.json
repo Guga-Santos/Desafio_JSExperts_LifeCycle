@@ -5,6 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "api": "npx json-server --watch data/fake-data-api.json --port 3001",
     "start": "node ."
   },
   "engines": {
@@ -12,5 +13,8 @@
   },
   "keywords": [],
   "author": "Guga Santos",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^0.17.3"
+  }
 }
