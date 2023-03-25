@@ -1,5 +1,7 @@
 const API = require('../../../api');
-const YoutubeTrackDTO = require('./../dto')
+const YoutubeTrackDTO = require('./../dto');
+const Music = require('../../music/music');
+const SpotifyMusic = require('../../spotify/spotify')
 
 class YoutubeRepository {
   constructor({ api }) {
@@ -18,6 +20,13 @@ class YoutubeRepository {
 const api = new API();
 const youtube = new YoutubeRepository({ api })
 
-const test = async() => console.log(await youtube.getAll())
+
+const test = async() => {
+  const data = await youtube.getAll();
+  const arr = data.map((ob) => new SpotifyMusic(ob))
+  console.log(arr.toString())
+
+}
+
 
 test()

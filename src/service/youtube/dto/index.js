@@ -5,7 +5,7 @@ class YoutubeTrackDTO {
     this.music_name = track.name;
     this.duration = track.time_ms;
     this.image = track.album.images[0].url;
-    this.music_preview = track.preview_url
+    this.music_preview = track.preview_url;
   }
 }
 

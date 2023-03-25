@@ -1,26 +1,27 @@
 const API = require('../../api')
 const Repository = require('../../repositories')
+const format = require('../../utils/timeFormat');
 
 
 class Music {
-  constructor({ repository }) {
-    this.repository = repository;
+  constructor({ 
+    artist_name,
+    album_name,
+    music_name,
+    duration,
+    image,
+    music_preview
+   }) {
+    this.artist_name = artist_name;
+    this.album_name = album_name;
+    this.music_name = music_name;
+    this.duration = format(duration);
+    this.image = image;
+    this.music_preview = music_preview;
   }
 
-  async getSpotifyData() {
-    const data = await this.repository.getSpotifyData()
-    return data.description
-  }
+
 }
 
 module.exports = Music;
 
-// const api = new API();
-// const repository = new Repository({ api });
-// const music = new Music({ repository })
-
-// const test = async () => {
-//   console.log(await music.getDescription())
-// }
-
-// test()
