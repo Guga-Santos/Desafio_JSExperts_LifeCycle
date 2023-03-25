@@ -1,13 +1,13 @@
 class API {
   async getSpotify() {
     const response = await fetch('http://localhost:3001/spotify');
-    const data = await response.json();
-    return data;
+    const { tracks } = await response.json();
+    return tracks;
   }
   async getYoutube() {
     const response = await fetch('http://localhost:3001/youtube');
-    const data = await response.json();
-    return data;
+    const { tracks } = await response.json();
+    return tracks;
   }
 }
 

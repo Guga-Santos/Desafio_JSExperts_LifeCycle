@@ -1,6 +1,6 @@
 const { describe, it, before, beforeEach, afterEach } = require('mocha');
 const API = require('./../../src/api');
-const Repository = require('./../../src/repository');
+const Repository = require('./../../src/repositories');
 const sinon = require('sinon');
 const { expect } = require('chai');
 

@@ -1,5 +1,5 @@
 const API = require('../../api')
-const Repository = require('../../repository')
+const Repository = require('../../repositories')
 
 
 class Music {

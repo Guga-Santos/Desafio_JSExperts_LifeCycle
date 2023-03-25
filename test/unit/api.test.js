@@ -17,7 +17,9 @@ function toJson (body) {
 }
 
 const MOCK_JSON = {
-  'any_key' : 'any_value'
+  tracks: {
+    'any_key' : 'any_value'
+    }
   };
 
 describe('Api Suite Tests', () => {
@@ -47,7 +49,7 @@ describe('Api Suite Tests', () => {
       const data = await api.getSpotify();
       const expected = MOCK_JSON;
 
-      expect(data).to.be.deep.equal(MOCK_JSON);
+      expect(data).to.be.deep.equal(MOCK_JSON.tracks);
     })
   })
 
@@ -77,7 +79,7 @@ describe('Api Suite Tests', () => {
       const data = await api.getYoutube();
       const expected = MOCK_JSON;
 
-      expect(data).to.be.deep.equal(MOCK_JSON);
+      expect(data).to.be.deep.equal(MOCK_JSON.tracks);
     })
   })
 })

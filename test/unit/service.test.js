@@ -3,7 +3,7 @@ const sinon = require('sinon');
 const { expect } = require('chai');
 
 const API = require('./../../src/api');
-const repository = require('./../../src/repository')/
+const repository = require('./../../src/repositories')/
 
 describe('Service Suite Tests', () => {
   describe('Music Service', () => {
