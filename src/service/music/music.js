@@ -15,7 +15,7 @@ class Music {
     this.artist_name = artist_name;
     this.album_name = album_name;
     this.music_name = music_name;
-    this.duration = format(duration);
+    this.duration = duration;
     this.image = image;
     this.music_preview = music_preview;
   }
