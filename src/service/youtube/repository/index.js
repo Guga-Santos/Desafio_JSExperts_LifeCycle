@@ -17,16 +17,4 @@ class YoutubeRepository {
 
 }
 
-const api = new API();
-const youtube = new YoutubeRepository({ api })
-
-
-const test = async() => {
-  const data = await youtube.getAll();
-  const arr = data.map((ob) => Number(new SpotifyMusic(ob)))
-  console.log(arr)
-
-}
-
-
-test()
+module.exports = YoutubeRepository;

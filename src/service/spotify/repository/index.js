@@ -15,9 +15,4 @@ class SpotifyRepository {
 
 }
 
-const api = new API();
-const spotify = new SpotifyRepository({ api })
-
-const test = async() => console.log(await spotify.getAll())
-
-test()
+module.exports = SpotifyRepository;
