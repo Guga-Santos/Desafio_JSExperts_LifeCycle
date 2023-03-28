@@ -1,11 +1,15 @@
 const { describe, it, before, beforeEach, afterEach } = require('mocha');
 const API = require('./../../src/api');
-const Repository = require('./../../src/repositories');
+const SpotifyRepository = require('./../../src/service/spotify/repository')
+const YoutubeRepository = require('./../../src/service/youtube/repository')
 const sinon = require('sinon');
 const { expect } = require('chai');
 
 const mocks = {
-  validData: { data: 'some_data'}
+  spotify: require('./mocks/spotifyData.json'),
+  spotifyDTO: require('./mocks/spotifyDTO.json'),
+  youtube: require('./mocks/youtubeData.json'),
+  youtubeDTO: require('./mocks/youtubeDTO.json')
 }
 
 describe('Respository Suite Tests', () => {
@@ -16,7 +20,6 @@ describe('Respository Suite Tests', () => {
 
     before(() => {
       api = new API();
-      repository = new Repository({ api });
     })
 
     beforeEach(() => {
@@ -31,10 +34,11 @@ describe('Respository Suite Tests', () => {
       sandbox.stub(
         api,
         api.getSpotify.name
-      ).returns(mocks.validData);
-
-      const data = await repository.getSpotifyData();
-      const expected = mocks.validData;
+      ).returns(mocks.spotify);
+      
+      const repository = new SpotifyRepository({ api })
+      const data = await repository.getAll();
+      const expected = mocks.spotifyDTO;
 
       expect(data).to.be.deep.equal(expected);
 
@@ -47,7 +51,6 @@ describe('Respository Suite Tests', () => {
 
     before(() => {
       api = new API();
-      repository = new Repository({ api });
     })
 
     beforeEach(() => {
@@ -61,10 +64,12 @@ describe('Respository Suite Tests', () => {
       sandbox.stub(
         api,
         api.getYoutube.name
-      ).returns(mocks.validData);
-
-      const data = await repository.getYoutubeData();
-      const expected = mocks.validData;
+      ).returns(mocks.youtube);
+      
+      const repository = new YoutubeRepository({ api })
+      const data = await repository.getAll();
+      console.log(data)
+      const expected = mocks.youtubeDTO;
 
       expect(data).to.be.deep.equal(expected);
 

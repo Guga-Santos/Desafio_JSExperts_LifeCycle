@@ -1,0 +1,105 @@
+{
+  "href": "https://api.youtube.com/v1/playlists/37i9dQZF1DX5Ejj0EkURtP/tracks?offset=0&limit=25&market=BR&locale=pt-BR&additional_types=track%2Cepisode",
+  "items": [
+    {
+      "added_at": "2022-10-09T00:00:00Z",
+      "added_by": {
+        "external_urls": {
+          "youtube": "https://open.youtube.com/user/"
+        },
+        "href": "https://api.youtube.com/v1/users/",
+        "id": "",
+        "type": "user",
+        "uri": "youtube:user:"
+      },
+      "is_local": false,
+      "primary_color": null,
+      "sharing_info": {
+        "share_id": "nxAFmDDTRZinNQoDoIbExQ",
+        "share_url": "https://open.youtube.com/track/3w3y8KPTfNeOKPiqUTakBh?si=nxAFmDDTRZinNQoDoIbExQ",
+        "uri": "youtube:track:3w3y8KPTfNeOKPiqUTakBh"
+      },
+      "track": {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "youtube": "https://open.youtube.com/artist/0du5cEVh5yTK9QJze8zA0C"
+              },
+              "href": "https://api.youtube.com/v1/artists/0du5cEVh5yTK9QJze8zA0C",
+              "id": "0du5cEVh5yTK9QJze8zA0C",
+              "artist_name": "Bruno Mars",
+              "type": "artist",
+              "uri": "youtube:artist:0du5cEVh5yTK9QJze8zA0C"
+            }
+          ],
+          "external_urls": {
+            "youtube": "https://open.youtube.com/album/58ufpQsJ1DS5kq4hhzQDiI"
+          },
+          "href": "https://api.youtube.com/v1/albums/58ufpQsJ1DS5kq4hhzQDiI",
+          "id": "58ufpQsJ1DS5kq4hhzQDiI",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273926f43e7cce571e62720fd46",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02926f43e7cce571e62720fd46",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851926f43e7cce571e62720fd46",
+              "width": 64
+            }
+          ],
+          "name": "Unorthodox Jukebox",
+          "release_date": "2012-12-07",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "youtube:album:58ufpQsJ1DS5kq4hhzQDiI"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "youtube": "https://open.youtube.com/artist/0du5cEVh5yTK9QJze8zA0C"
+            },
+            "href": "https://api.youtube.com/v1/artists/0du5cEVh5yTK9QJze8zA0C",
+            "id": "0du5cEVh5yTK9QJze8zA0C",
+            "artist_name": "Bruno Mars",
+            "type": "artist",
+            "uri": "youtube:artist:0du5cEVh5yTK9QJze8zA0C"
+          }
+        ],
+        "disc_number": 1,
+        "time_ms": 233478,
+        "episode": false,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USAT21203287"
+        },
+        "external_urls": {
+          "youtube": "https://open.youtube.com/track/3w3y8KPTfNeOKPiqUTakBh"
+        },
+        "href": "https://api.youtube.com/v1/tracks/3w3y8KPTfNeOKPiqUTakBh",
+        "id": "3w3y8KPTfNeOKPiqUTakBh",
+        "is_local": false,
+        "is_playable": true,
+        "name": "Locked out of Heaven",
+        "popularity": 86,
+        "preview_url": "https://p.scdn.co/mp3-preview/4b3bedd0366b3ebe72a20ece0d596fac196a5b3f?cid=d8a5ed958d274c2e8ee717e6a4b0971d",
+        "track": true,
+        "track_number": 2,
+        "type": "track",
+        "uri": "youtube:track:3w3y8KPTfNeOKPiqUTakBh"
+      },
+      "video_thumbnail": {
+        "url": null
+      }
+    }
+  ]
+}

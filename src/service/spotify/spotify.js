@@ -11,9 +11,10 @@ class SpotifyMusic extends Music {
 
     const types = {
       string: `${this.music_name} - ${this.album_name} - ${this.artist_name}`,
-      number: this.duration
+      number: this.duration,
+      default: this.duration
     }
-    return types[coercionType] || types.number
+    return types[coercionType]
   }
 }
 
