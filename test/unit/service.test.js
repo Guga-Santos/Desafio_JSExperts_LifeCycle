@@ -32,7 +32,16 @@ const youtubeMock = {
 }
 
 const spotifyMock = {
-  
+  repository: [{
+    artist_name: 'ROSALÍA',
+    album_name: 'MOTOMAMI +',
+    music_name: 'DESPECHÁ',
+    duration: 156787,
+    image: 'https://i.scdn.co/image/ab67616d0000b273efc0ef9dd996312ebaf0bf52',
+    music_preview: 'https://p.scdn.co/mp3-preview/dda6170f0da3bbe09a4d2c019bb097c5157bf4b1?cid=d8a5ed958d274c2e8ee717e6a4b0971d'
+  }],
+  toString: 'DESPECHÁ - MOTOMAMI + - ROSALÍA',
+  toNumber: 156787,
 }
 
 describe('Service Suite Tests', () => {
@@ -88,14 +97,14 @@ describe('Service Suite Tests', () => {
       sinon.stub(
         repository,
         repository.getAll.name
-      ).returns(youtubeMock.repository)
+      ).returns(spotifyMock.repository)
 
       const data = await repository.getAll();
       const [service] = data.map((item) => new Youtube( item ));
  
-      expect(service).to.be.deep.equal(youtubeMock.repository.at(0))
-      expect(service.toString()).to.be.deep.equal(youtubeMock.toString);
-      expect(Number(service)).to.be.deep.equal(youtubeMock.toNumber);
+      expect(service).to.be.deep.equal(spotifyMock.repository.at(0))
+      expect(service.toString()).to.be.deep.equal(spotifyMock.toString);
+      expect(Number(service)).to.be.deep.equal(spotifyMock.toNumber);
     })
   })
 }) 
