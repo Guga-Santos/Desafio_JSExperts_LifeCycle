@@ -20,3 +20,5 @@ const routes = {
     return res.end();
   }
 }
+
+module.exports = routes;

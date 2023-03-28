@@ -1,4 +1,5 @@
 const http = require('node:http');
+const routes = require('./routes')
 
 const DEFAULT_PORT = 3000;
 

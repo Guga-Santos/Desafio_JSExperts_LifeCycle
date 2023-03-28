@@ -1,8 +1,3 @@
-const API = require('../../api')
-const Repository = require('../../repositories')
-const format = require('../../utils/timeFormat');
-
-
 class Music {
   constructor({ 
     artist_name,
