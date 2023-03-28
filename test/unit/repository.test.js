@@ -36,7 +36,7 @@ describe('Respository Suite Tests', () => {
         api.getSpotify.name
       ).returns(mocks.spotify);
       
-      const repository = new SpotifyRepository({ api })
+      repository = new SpotifyRepository({ api })
       const data = await repository.getAll();
       const expected = mocks.spotifyDTO;
 
@@ -66,9 +66,8 @@ describe('Respository Suite Tests', () => {
         api.getYoutube.name
       ).returns(mocks.youtube);
       
-      const repository = new YoutubeRepository({ api })
+      repository = new YoutubeRepository({ api })
       const data = await repository.getAll();
-      console.log(data)
       const expected = mocks.youtubeDTO;
 
       expect(data).to.be.deep.equal(expected);

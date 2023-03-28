@@ -13,7 +13,6 @@ const SpotifyRepository = require('./../../src/service/spotify/repository');
 
 
 const API = require('./../../src/api');
-const Repository = require('./../../src/repositories')
 
 
 const youtubeMock = {
