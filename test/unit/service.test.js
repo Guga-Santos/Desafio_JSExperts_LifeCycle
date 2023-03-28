@@ -26,7 +26,13 @@ const youtubeMock = {
       image: 'https://i.scdn.co/image/ab67616d0000b2735393c5d3cac806092a9bc468',
       music_preview: 'https://p.scdn.co/mp3-preview/407e05795004323b971853a57c8a141bb164645b?cid=d8a5ed958d274c2e8ee717e6a4b0971d'
     }
-  ]
+  ],
+  toString: 'Waiting For Love - Stories - Avicii',
+  toNumber: 230613
+}
+
+const spotifyMock = {
+  
 }
 
 describe('Service Suite Tests', () => {
@@ -57,18 +63,39 @@ describe('Service Suite Tests', () => {
   describe('Youtube Service', () => { 
     before(async () => {
       repository = new YoutubeRepository({ api })
-      const data = await repository.getAll();
-      // const test = data.map((item) => new Youtube( item ))
-
-      console.log(data)
     })
-    it('Ensure it returns data', () => {
+
+    it('Ensure it returns data', async () => {
+      sinon.stub(
+        repository,
+        repository.getAll.name
+      ).returns(youtubeMock.repository)
+
+      const data = await repository.getAll();
+      const [service] = data.map((item) => new Youtube( item ));
+ 
+      expect(service).to.be.deep.equal(youtubeMock.repository.at(0))
+      expect(service.toString()).to.be.deep.equal(youtubeMock.toString);
+      expect(Number(service)).to.be.deep.equal(youtubeMock.toNumber);
 
     })
   })
   describe('Spotify Service', () => {
-    it('Ensure it returns data', () => {
+    before(async () => {
+      repository = new SpotifyRepository({ api })
+    })
+    it('Ensure it returns data', async () => {
+      sinon.stub(
+        repository,
+        repository.getAll.name
+      ).returns(youtubeMock.repository)
 
+      const data = await repository.getAll();
+      const [service] = data.map((item) => new Youtube( item ));
+ 
+      expect(service).to.be.deep.equal(youtubeMock.repository.at(0))
+      expect(service.toString()).to.be.deep.equal(youtubeMock.toString);
+      expect(Number(service)).to.be.deep.equal(youtubeMock.toNumber);
     })
   })
 }) 
