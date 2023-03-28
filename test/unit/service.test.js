@@ -103,7 +103,7 @@ describe('Service Suite Tests', () => {
       const [service] = data.map((item) => new Spotify( item ));
  
       expect(service).to.be.deep.equal(spotifyMock.repository.at(0))
-      expect(service.toString()).to.be.deep.equal(spotifyMock.toString);
+      expect(String(service)).to.be.deep.equal(spotifyMock.toString);
       expect(Number(service)).to.be.deep.equal(spotifyMock.toNumber);
     })
   })

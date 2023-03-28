@@ -10,9 +10,8 @@ class SpotifyRepository {
     const data = await this.api.getSpotify()
 
     const filteredData = data.items.map((item) =>  new SpotifyTrackDTO({ track: item['track'] }))
-    return Object.values(filteredData);
+    return filteredData;
   }
 
 }
-
 module.exports = SpotifyRepository;

@@ -1,4 +1,6 @@
+const API = require("../../api");
 const Music = require("../music/music");
+const SpotifyRepository = require("./repository");
 
 class SpotifyMusic extends Music {
   constructor({ ...tracks }) {
@@ -7,7 +9,7 @@ class SpotifyMusic extends Music {
 
   [Symbol.toPrimitive](coercionType){
     return coercionType === "string"
-      ? ` ${this.music_name} - ${this.album_name} - ${this.artist_name}\n`
+      ? `${this.music_name} - ${this.album_name} - ${this.artist_name}`
       : this.duration
   }
 }

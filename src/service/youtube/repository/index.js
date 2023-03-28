@@ -1,7 +1,4 @@
-const API = require('../../../api');
 const YoutubeTrackDTO = require('./../dto');
-const Music = require('../../music/music');
-const SpotifyMusic = require('../../spotify/spotify')
 
 class YoutubeRepository {
   constructor({ api }) {
