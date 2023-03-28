@@ -8,9 +8,12 @@ class SpotifyMusic extends Music {
   }
 
   [Symbol.toPrimitive](coercionType){
-    return coercionType === "string"
-      ? `${this.music_name} - ${this.album_name} - ${this.artist_name}`
-      : this.duration
+
+    const types = {
+      string: `${this.music_name} - ${this.album_name} - ${this.artist_name}`,
+      number: this.duration
+    }
+    return types[coercionType] || types.number
   }
 }
 
